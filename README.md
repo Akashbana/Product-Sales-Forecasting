@@ -2,11 +2,11 @@
 
 In the competitive retail industry, the ability to predict future sales accurately is crucial for operational and strategic planning. Product sales forecasting aims to estimate the number of products a store will sell in the future, based on various influencing factors such as store type, location, regional characteristics, promotional activities, and temporal variations (such as holidays and seasons). This project focuses on developing a predictive model that uses historical sales data from different stores to forecast sales for upcoming periods.
 
-Aim is to predict future sales from stores to optimize following things:
+Problem statement decoded - Supply chain optimization
 
-1. Store inventory management   
-2. Production planning    
-3. Supply chain management
+1. Forecasting total sales per day - Helps in production & procurement planning
+2. Forecasting total sales per day per region - Helps in logistics planning
+3. Forecasting total sales per day per region per store - Helps in inventory management
 
 Data description:
 
