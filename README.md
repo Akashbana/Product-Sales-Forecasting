@@ -26,12 +26,18 @@ Sales: Total sales amount for the store on the given day.
 2. Identifying & treating: Missing values, Outliers
 3. Bi-variate analysis
 
-Insights:
+Insights from EDA:
 
-Data has continuous dates from first to last     
-Around 47% of total stores belong to S1, which is the highest. Around 62% of total stores belong to S1 & S4     
-Around 45% of stores are located in L1, which is the highest. Around 71% of stores are located in L1 & L2     
-Around 34% percentage of stores are present in region, R1 which is the highest. Around 63% of stores are situated in regions R1 & R2     
-Around 13% of the data recorded are holidays     
-Around 45% of the data recorded have discounts     
-Median number of orders per day is around 50 & Median sales per day is around 35,000    
+1. Data has continuous dates from first to last     
+2. Around 47% of total stores belong to S1, which is the highest. Around 62% of total stores belong to S1 & S4     
+3. Around 45% of stores are located in L1, which is the highest. Around 71% of stores are located in L1 & L2     
+4. Around 34% percentage of stores are present in region, R1 which is the highest. Around 63% of stores are situated in regions R1 & R2     
+5. Around 13% of the data recorded are holidays     
+6. Around 45% of the data recorded have discounts     
+7. Median number of orders per day is around 50 & Median sales per day is around 35,000    
+8. No missing values in the data
+9. Highest average sales per day store-wise: S4 > S3 > S1 > S2
+10. Highest average sales per day location-wise: L2 > L1 > L3 > L4 > L5
+11. Highest average sales per day region-wise: R1 > R2 > R3 > R4
+12. Median sales per day on holidays is 33,418 against 40,530 on non-holidays
+13. Median sales per day on discount days is 46,242 against 34,791 on non-discount days
