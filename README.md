@@ -25,3 +25,13 @@ Sales: Total sales amount for the store on the given day.
 1. Uni-variate analysis using line plots & Histograms
 2. Identifying & treating: Missing values, Outliers
 3. Bi-variate analysis
+
+Insights:
+
+Data has continuous dates from first to last     
+Around 47% of total stores belong to S1, which is the highest. Around 62% of total stores belong to S1 & S4     
+Around 45% of stores are located in L1, which is the highest. Around 71% of stores are located in L1 & L2     
+Around 34% percentage of stores are present in region, R1 which is the highest. Around 63% of stores are situated in regions R1 & R2     
+Around 13% of the data recorded are holidays     
+Around 45% of the data recorded have discounts     
+Median number of orders per day is around 50 & Median sales per day is around 35,000    
