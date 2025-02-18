@@ -8,6 +8,7 @@ Problem statement decoded - Supply chain optimization
 2. Forecasting total sales per day per region - Helps in logistics planning
 3. Forecasting total sales per day per region per store - Helps in inventory management
 
+<img src="data.png" alt="Data" width="300"/>
 
 Data description:
 
