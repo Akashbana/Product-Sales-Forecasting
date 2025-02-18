@@ -8,9 +8,9 @@ Problem statement decoded - Supply chain optimization
 2. Forecasting total sales per day per region - Helps in logistics planning
 3. Forecasting total sales per day per region per store - Helps in inventory management
 
-<img src="data.png" alt="Data" width="300"/>
+***Data:***
 
-Data description:
+<img src="Pictures/data.png" alt="Data" width="800"/> 
 
 ID: Unique identifier for each record in the dataset.    
 Store_id: Unique identifier for each store.    
@@ -27,6 +27,12 @@ Sales: Total sales amount for the store on the given day.
 1. Uni-variate analysis using line plots & Histograms
 2. Identifying & treating: Missing values, Outliers
 3. Bi-variate analysis
+
+***Uni-variate Analysis:***
+
+<img src="Pictures/data.png" alt="Data" width="800"/> 
+<img src="Pictures/data.png" alt="Data" width="800"/> 
+<img src="Pictures/data.png" alt="Data" width="800"/> 
 
 Insights from EDA:
 
