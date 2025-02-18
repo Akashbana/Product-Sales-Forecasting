@@ -33,15 +33,6 @@ Sales: Total sales amount for the store on the given day.
 <img src="Pictures/no_of_stores.png" alt="Data" width="800"/> 
 <img src="Pictures/orders_and_sales_distribution.png" alt="Data" width="800"/> 
 
-***Bi-variate Analysis:***
-
-<img src="Pictures/avg_sales_per_store_type.png" alt="Data" width="800"/> 
-<img src="Pictures/avg_sales_per_location.png" alt="Data" width="800"/> 
-<img src="Pictures/avg_sales_per_region.png" alt="Data" width="800"/> 
-<img src="Pictures/avg_sales_per_store_type.png" alt="Data" width="800"/> 
-
-Insights from EDA:
-
 1. Data has continuous dates from first to last     
 2. Around 47% of total stores belong to S1, which is the highest. Around 62% of total stores belong to S1 & S4     
 3. Around 45% of stores are located in L1, which is the highest. Around 71% of stores are located in L1 & L2     
@@ -50,6 +41,14 @@ Insights from EDA:
 6. Around 45% of the data recorded have discounts     
 7. Median number of orders per day is around 50 & Median sales per day is around 35,000    
 8. No missing values in the data
+
+***Bi-variate Analysis:***
+
+<img src="Pictures/avg_sales_per_store_type.png" alt="Data" width="800"/> 
+<img src="Pictures/avg_sales_per_location.png" alt="Data" width="800"/> 
+<img src="Pictures/avg_sales_per_region.png" alt="Data" width="800"/> 
+<img src="Pictures/avg_sales_per_day_of_week.png" alt="Data" width="800"/> 
+
 9. Highest average sales per day store-wise: S4 > S3 > S1 > S2
 10. Highest average sales per day location-wise: L2 > L1 > L3 > L4 > L5
 11. Highest average sales per day region-wise: R1 > R2 > R3 > R4
