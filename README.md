@@ -31,7 +31,7 @@ Sales: Total sales amount for the store on the given day.
 ***Uni-variate Analysis:***
 
 <img src="Pictures/no_of_stores.png" alt="Data" width="800"/> 
-<img src="Pictures/data.png" alt="Data" width="800"/> 
+<img src="Pictures/orders_and_sales_distribution.png" alt="Data" width="800"/> 
 <img src="Pictures/data.png" alt="Data" width="800"/> 
 
 Insights from EDA:
