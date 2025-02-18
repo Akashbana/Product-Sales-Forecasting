@@ -37,7 +37,7 @@ Sales: Total sales amount for the store on the given day.
 
 <img src="Pictures/avg_sales_per_store_type.png" alt="Data" width="800"/> 
 <img src="Pictures/avg_sales_per_location.png" alt="Data" width="800"/> 
-<img src="Pictures/avg_sales_per_store_type.png" alt="Data" width="800"/> 
+<img src="Pictures/avg_sales_per_region.png" alt="Data" width="800"/> 
 <img src="Pictures/avg_sales_per_store_type.png" alt="Data" width="800"/> 
 
 Insights from EDA:
