@@ -59,7 +59,11 @@ Sales: Total sales amount for the store on the given day.
 
 Any time series visualization may consist of the following components: Base Level + Trend + Seasonality + Error
 
+<img src="Pictures/data.png" alt="Data" width="800"/>
 
+<img src="Pictures/data.png" alt="Data" width="800"/>
+
+<img src="Pictures/data.png" alt="Data" width="800"/>
 
 ***Stationarity***
 
