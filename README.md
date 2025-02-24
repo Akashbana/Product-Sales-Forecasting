@@ -73,6 +73,8 @@ Any time series visualization may consist of the following components: Base Leve
 
 A stationary series is one where the values of the series is not a function of time. Hence the statistical properties of the series like mean, variance and autocorrelation are constant over time. This makes it easier for models to detect patterns and make accurate predictions
 
+<img src="Pictures/stationarity.png" alt="Data" width="500"/>
+
 ***Insights:***
 
 Total daily sales is taken putting all the store sales together, analysing time series characteristics using line plots & time series decomposition:
