@@ -54,3 +54,23 @@ Sales: Total sales amount for the store on the given day.
 11. Highest average sales per day region-wise: R1 > R2 > R3 > R4
 12. Median sales per day on holidays is 33,418 against 40,530 on non-holidays
 13. Median sales per day on discount days is 46,242 against 34,791 on non-discount days
+
+## Time Series Characteristics
+
+Any time series visualization may consist of the following components: Base Level + Trend + Seasonality + Error
+
+
+
+***Stationarity***
+
+A stationary series is one where the values of the series is not a function of time. Hence the statistical properties of the series like mean, variance and autocorrelation are constant over time. This makes it easier for models to detect patterns and make accurate predictions
+
+***Insights:***
+
+Total daily sales is taken putting all the store sales together, analysing time series characteristics using line plots & time series decomposition:
+
+1. There is a fluctuating trend, but no clear cyclic pattern     
+2. Seasonality is visible from the decomposition but not clear     
+3. The seasonal component looks stable (constant peaks and troughs) → Suggests an additive model      
+4. The residuals appear random, which suggests that most of the signal has been captured by the trend and seasonality components      
+5. Data is stationary       
