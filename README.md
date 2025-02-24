@@ -61,7 +61,11 @@ Any time series visualization may consist of the following components: Base Leve
 
 <img src="Pictures/total_forecast.png" alt="Data" width="800"/>
 
+***Auto-correlation***
+
 <img src="Pictures/acf.png" alt="Data" width="800"/>
+
+***Decomposition***
 
 <img src="Pictures/decomposition.png" alt="Data" width="800"/>
 
