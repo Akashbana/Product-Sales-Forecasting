@@ -97,13 +97,12 @@ Total daily sales is taken putting all the store sales together, analysing time 
 
 ## Model Building
 
-***Forecasting - Total sales per day***
+***Forecasting Total sales per day***
 
-This forecast helps in broader planning like production planning & raw material procurement: 
-1. Accurate forecasting helps in bulk buying of raw materials which reduces procurement costs
+ Helps in broader planning like production planning & raw material procurement. These optimizations help company reduce operating costs, and therefore increasing operating margins
+
+1. Helps in bulk buying of raw materials which reduces procurement costs
 2. Manpower & Utility allocation is optimised
-
-These optimization help company reduce operating costs, therefore increasing operating margins
 
 ***Baseline Model***
 
@@ -111,7 +110,7 @@ Without any feature engineering & exogenous variables, baseline model is built
 
 <img src="Pictures/base_perf.png" alt="Data" width="800"/> 
 
-Validation MAPE - 22%
+**Validation MAPE - 22%**
 
 ***Impact of Holiday***
 
@@ -122,7 +121,7 @@ Validation MAPE - 22%
 
 <img src="Pictures/perf1.png" alt="Data" width="800"/>
 
-Validation MAPE - 22%
+**Validation MAPE after using 'Holiday' as exogenous variable - 22%**
 
 ***Impact of Discount***
 
@@ -132,14 +131,22 @@ Validation MAPE - 22%
 
 <img src="Pictures/perf2.png" alt="Data" width="800"/>
 
-Validation MAPE - 18%
+**Validation MAPE after using 'Holiday & Discount' as exogenous variables - 18%**
 
 ***Feature Engineering***
 
+Initially, Target encoded following features- Store type, Location type & Region code. Multiplied each other along with 'store sales' to capture their impact on individual days
 
+<img src="Pictures/feat_engg.png" alt="Data" width="800"/> 
+
+This is the final dataframe used to build the model which includes exogenous variables - 'Holiday', 'Discount', 'Encoded'
+
+<img src="Pictures/final_df.png" alt="Data" width="600"/>  
 
 <img src="Pictures/perf3.png" alt="Data" width="800"/> 
 
-Validation MAPE - 0.96% 
+**Validation MAPE - 0.96%**
+
+MAPE has reduced drastically from 18% to 0.96% with above mentioned feature engineering
 
 
