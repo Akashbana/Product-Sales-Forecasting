@@ -111,6 +111,8 @@ Without any feature engineering & exogenous variables, baseline model is built
 
 <img src="Pictures/decomposition.png" alt="Data" width="800"/>
 
+Validation MAPE - 22%
+
 <img src="Pictures/decomposition.png" alt="Data" width="800"/>
 
 <img src="Pictures/decomposition.png" alt="Data" width="800"/>
