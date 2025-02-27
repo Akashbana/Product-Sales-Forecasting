@@ -99,6 +99,22 @@ Total daily sales is taken putting all the store sales together, analysing time 
 
 ***Forecasting - Total sales per day***
 
+This forecast helps in broader planning like production planning & raw material procurement: 
+1. Accurate forecasting helps in bulk buying of raw materials which reduces procurement costs
+2. Manpower & Utility allocation is optimised
 
+These optimization help company reduce operating costs, therefore increasing operating margins
+
+***Baseline Model***
+
+Without any feature engineering & exogenous variables, baseline model is built
+
+<img src="Pictures/decomposition.png" alt="Data" width="800"/>
+
+<img src="Pictures/decomposition.png" alt="Data" width="800"/>
+
+<img src="Pictures/decomposition.png" alt="Data" width="800"/>
+
+<img src="Pictures/decomposition.png" alt="Data" width="800"/> 
 
 
