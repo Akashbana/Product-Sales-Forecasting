@@ -109,14 +109,37 @@ These optimization help company reduce operating costs, therefore increasing ope
 
 Without any feature engineering & exogenous variables, baseline model is built
 
-<img src="Pictures/decomposition.png" alt="Data" width="800"/>
+<img src="Pictures/base_perf.png" alt="Data" width="800"/> 
 
 Validation MAPE - 22%
 
-<img src="Pictures/decomposition.png" alt="Data" width="800"/>
+***Impact of Holiday***
 
-<img src="Pictures/decomposition.png" alt="Data" width="800"/>
+* Holidays can be any day of the week and holidays does not mean sundays
+* Daily total sales are lower compared to non holidays. There are certain days when daily total sales are extremely low
+* It is statistically proven that daily sales are lower during holidays
+* These days could be festivals for which people would have already done shopping in prior
 
-<img src="Pictures/decomposition.png" alt="Data" width="800"/> 
+<img src="Pictures/perf1.png" alt="Data" width="800"/>
+
+Validation MAPE - 22%
+
+***Impact of Discount***
+
+* Sales are higher when discounts are provided but lot of fluctuations
+* Total sales could be less because total no. of stores offered discounts would be less on a particular day
+* As percentage of total stores who offer discounts go up, total sales go up as well, producing a spike in total sales
+
+<img src="Pictures/perf2.png" alt="Data" width="800"/>
+
+Validation MAPE - 18%
+
+***Feature Engineering***
+
+
+
+<img src="Pictures/perf3.png" alt="Data" width="800"/> 
+
+Validation MAPE - 0.96% 
 
 
