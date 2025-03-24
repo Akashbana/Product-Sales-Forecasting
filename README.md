@@ -2,7 +2,7 @@
 
 In the competitive retail industry, the ability to predict future sales accurately is crucial for operational and strategic planning. Product sales forecasting aims to estimate the number of products a store will sell in the future, based on various influencing factors such as store type, location, regional characteristics, promotional activities, and temporal variations (such as holidays and seasons). This project focuses on developing a predictive model that uses historical sales data from different stores to forecast sales for upcoming periods.
 
-***Supply Chain Optimization***
+**Supply Chain Optimization**
 
 1. Total Sales Forecasting:
   * Facilitates comprehensive ***production planning*** aligned with demand, enables bulk raw material procurement, ***reducing procurement costs*** & supports efficient allocation of manpower and utilities
@@ -12,7 +12,7 @@ In the competitive retail industry, the ability to predict future sales accurate
 2. Impact of Holiday on sales
 3. Impact of discount on sales
 
-***Data:***
+**Data:**
 
 <img src="Pictures/data.png" alt="Data" width="800"/> 
 
@@ -28,15 +28,16 @@ Discount: Indicates whether a discount was offered on the given date (Yes/No)
 Sales: Total sales amount for the store on the given day.     
 
 ## EDA
-1. Uni-variate analysis using line plots & Histograms
-2. Identifying & treating: Missing values, Outliers
-3. Bi-variate analysis
 
-<img src="Pictures/data.png" alt="Data" width="800"/> 
+<img src="Pictures/location_type.png" alt="Data" width="800"/> 
 
-<img src="Pictures/data.png" alt="Data" width="800"/>
+<img src="Pictures/store_type.png" alt="Data" width="800"/> 
 
-<img src="Pictures/data.png" alt="Data" width="800"/> 
+<img src="Pictures/region_type.png" alt="Data" width="800"/> 
+
+<img src="Pictures/holiday_discount.png" alt="Data" width="800"/>
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
 
 
 
