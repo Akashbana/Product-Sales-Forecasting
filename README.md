@@ -32,115 +32,11 @@ Sales: Total sales amount for the store on the given day.
 2. Identifying & treating: Missing values, Outliers
 3. Bi-variate analysis
 
-***Uni-variate Analysis:***
+<img src="Pictures/data.png" alt="Data" width="800"/> 
 
-<img src="Pictures/no_of_stores.png" alt="Data" width="800"/> 
-<img src="Pictures/orders_and_sales_distribution.png" alt="Data" width="800"/> 
+<img src="Pictures/data.png" alt="Data" width="800"/>
 
-1. Data has continuous dates from first to last     
-2. Around 47% of total stores belong to S1, which is the highest. Around 62% of total stores belong to S1 & S4     
-3. Around 45% of stores are located in L1, which is the highest. Around 71% of stores are located in L1 & L2     
-4. Around 34% percentage of stores are present in region, R1 which is the highest. Around 63% of stores are situated in regions R1 & R2     
-5. Around 13% of the data recorded are holidays     
-6. Around 45% of the data recorded have discounts     
-7. Median number of orders per day is around 50 & Median sales per day is around 35,000    
-8. No missing values in the data
+<img src="Pictures/data.png" alt="Data" width="800"/> 
 
-***Bi-variate Analysis:***
-
-<img src="Pictures/avg_sales_per_store_type.png" alt="Data" width="800"/> 
-<img src="Pictures/avg_sales_per_location.png" alt="Data" width="800"/> 
-<img src="Pictures/avg_sales_per_region.png" alt="Data" width="800"/> 
-<img src="Pictures/avg_sales_per_day_of_week.png" alt="Data" width="800"/> 
-
-9. Highest average sales per day store-wise: S4 > S3 > S1 > S2
-10. Highest average sales per day location-wise: L2 > L1 > L3 > L4 > L5
-11. Highest average sales per day region-wise: R1 > R2 > R3 > R4
-12. Median sales per day on holidays is 33,418 against 40,530 on non-holidays
-13. Median sales per day on discount days is 46,242 against 34,791 on non-discount days
-
-## Time Series Characteristics
-
-Any time series visualization may consist of the following components: Base Level + Trend + Seasonality + Error
-
-<img src="Pictures/total_forecast.png" alt="Data" width="800"/>
-
-***Auto-correlation***
-
-<img src="Pictures/acf.png" alt="Data" width="800"/>
-
-***Decomposition***
-
-<img src="Pictures/decomposition.png" alt="Data" width="800"/>
-
-***Stationarity***
-
-A stationary series is one where the values of the series is not a function of time. Hence the statistical properties of the series like mean, variance and autocorrelation are constant over time. This makes it easier for models to detect patterns and make accurate predictions
-
-<img src="Pictures/stationarity.png" alt="Data" width="500"/>
-
-***Insights:***
-
-Total daily sales is taken putting all the store sales together, analysing time series characteristics using line plots & time series decomposition:
-
-1. There is a fluctuating trend, but no clear cyclic pattern     
-2. Seasonality is visible from the decomposition but not clear     
-3. The seasonal component looks stable (constant peaks and troughs) → Suggests an additive model      
-4. The residuals appear random, which suggests that most of the signal has been captured by the trend and seasonality components      
-5. Data is stationary
-
-## Model Building
-
-***Forecasting Total sales per day***
-
- Helps in broader planning like production planning & raw material procurement. These optimizations help company reduce operating costs, and therefore increasing operating margins
-
-1. Helps in bulk buying of raw materials which reduces procurement costs
-2. Manpower & Utility allocation is optimised
-
-***Baseline Model***
-
-Without any feature engineering & exogenous variables, baseline model is built
-
-<img src="Pictures/base_perf.png" alt="Data" width="800"/> 
-
-**Validation MAPE - 22%**
-
-***Impact of Holiday***
-
-* Holidays can be any day of the week and holidays does not mean sundays
-* Daily total sales are lower compared to non holidays. There are certain days when daily total sales are extremely low
-* It is statistically proven that daily sales are lower during holidays
-* These days could be festivals for which people would have already done shopping in prior
-
-<img src="Pictures/perf1.png" alt="Data" width="800"/>
-
-**Validation MAPE after using 'Holiday' as exogenous variable - 22%**
-
-***Impact of Discount***
-
-* Sales are higher when discounts are provided but lot of fluctuations
-* Total sales could be less because total no. of stores offered discounts would be less on a particular day
-* As percentage of total stores who offer discounts go up, total sales go up as well, producing a spike in total sales
-
-<img src="Pictures/perf2.png" alt="Data" width="800"/>
-
-**Validation MAPE after using 'Holiday & Discount' as exogenous variables - 18%**
-
-***Feature Engineering***
-
-Initially, Target encoded following features- Store type, Location type & Region code. Multiplied each other along with 'store sales' to capture their impact on individual days
-
-<img src="Pictures/feat_engg.png" alt="Data" width="800"/> 
-
-This is the final dataframe used to build the model which includes exogenous variables - 'Holiday', 'Discount', 'Encoded'
-
-<img src="Pictures/final_df.png" alt="Data" width="600"/>  
-
-<img src="Pictures/perf3.png" alt="Data" width="800"/> 
-
-**Validation MAPE - 0.96%**
-
-MAPE has reduced drastically from 18% to 0.96% with above mentioned feature engineering
 
 
