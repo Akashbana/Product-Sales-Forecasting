@@ -40,4 +40,6 @@ Sales: Total sales amount for the store on the given day.
 <img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
 
 
+## Data Pre-Processing
+
 
