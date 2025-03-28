@@ -46,16 +46,18 @@ Sales: Total sales amount for the store on the given day.
 
 Accurate forecasting of sales has 3 major benefits:
 
-Accurate production levels
-Reduced logistic costs
-Optimized Inventory space
-Recommendations:
+* Accurate production levels
+* Reduced logistic costs
+* Optimized Inventory space
 
-Required production level = Upper limit of 95% CI - Meets sales demand, avoids under stocking, leads to higher revenue
-Adjust the remaining inventory in tomorrow's forecast & plan production accordingly
-Extra inventory space required <= 4% of total sales per day
-Optimised operational costs by proper man power allocation & utility planning
-Since aggregated forecast values from individual regions <= Upper limit of 95% CI & forecast error MAPE < 1%, use:
-For production - Forecasts from Total sales per day
-For logistics planning - Forecasts from individuals regions
-This way we ensure there is no overproduction & any minor demand variations in individual regions are also met easily
+***Recommendations:***
+
+1. Required production level = Upper limit of 95% CI -
+   * Meets sales demand, avoids under stocking, leads to higher revenue
+   * Adjust the remaining inventory in tomorrow's forecast & plan production accordingly
+   * Extra inventory space required <= 4% of total sales per day
+   * Optimised operational costs by proper man power allocation & utility planning
+2. Since aggregated forecast values from individual regions <= Upper limit of 95% CI & forecast error MAPE < 1%, use:
+   * For production - Forecasts from Total sales per day
+   * For logistics planning - Forecasts from individuals regions
+   * This way we ensure there is no overproduction & any minor demand variations in individual regions are also met easily
