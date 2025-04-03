@@ -61,3 +61,5 @@ Accurate forecasting of sales has 3 major benefits:
    * For production - Forecasts from Total sales per day
    * For logistics planning - Forecasts from individuals regions
    * This way we ensure there is no overproduction & any minor demand variations in individual regions are also met easily
+  
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
