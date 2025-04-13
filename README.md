@@ -48,6 +48,10 @@ Sales: Total sales amount for the store on the given day.
 
 ## Outcome
 
+1. Stats Models
+2. ML Models
+3. DL Models
+
 Accurate forecasting of sales has 3 major benefits:
 
 * Accurate production levels
