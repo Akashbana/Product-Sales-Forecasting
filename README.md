@@ -44,13 +44,15 @@ Sales: Total sales amount for the store on the given day.
 
 ## Model Building
 
-
+1. Stats Models
+   SARIMAX - Val MAPE - 7.8% | Train MAPE - 7.5%
+3. ML Models
+   XGBoost - 
+5. DL Models
 
 ## Outcome
 
-1. Stats Models
-2. ML Models
-3. DL Models
+
 
 Accurate forecasting of sales has 3 major benefits:
 
