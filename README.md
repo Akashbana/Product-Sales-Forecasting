@@ -46,9 +46,10 @@ Sales: Total sales amount for the store on the given day.
 
 1. Stats Models     
    SARIMAX: ***Val MAPE - 7.8% | Train MAPE - 7.5%***
-3. ML Models
-   XGBoost - 
+3. ML Models    
+   XGBoost - ***Val MAPE -  | Train MAPE - ***
 5. DL Models
+   NN - 
 
 ## Outcome
 
