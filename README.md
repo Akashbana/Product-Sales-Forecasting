@@ -25,7 +25,7 @@ Date: The specific date on which the data was recorded.
 Holiday: Indicator of whether the date was a holiday (1: Yes, 0: No).    
 Discount: Indicates whether a discount was offered on the given date (Yes/No)     
 #Order: The number of orders received by the store on the specified day.    
-Sales: Total sales amount for the store on the given day.     
+Sales: Total sales amount for the store on the given day.  
 
 ## EDA
 
