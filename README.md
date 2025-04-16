@@ -49,7 +49,7 @@ Sales: Total sales amount for the store on the given day.
 3. ML Models    
    XGBoost - ***Val MAPE -  | Train MAPE - ***
 5. DL Models
-   NN - 
+   NN - ***Val MAPE -  | Train MAPE - ***
 
 ## Outcome
 
