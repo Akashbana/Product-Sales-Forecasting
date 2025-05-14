@@ -57,14 +57,8 @@ Sales: Total sales amount for the store on the given day.
 
 ***Insights:***
 
-1. Weekends drive higher revenue, likely due to more consumer activity
-2. Monday shows fewer but higher-value orders—suggesting potential for premium offerings
-
-***Recommendation:***
-
-1. Leverage weekends for promotions to maximize volume
-2. Explore targeted campaigns on Mondays for high-value customers
-
+1. Weekends drive higher revenue, likely due to more consumer activity - ***Leverage weekends for promotions to maximize volume***
+2. Monday shows fewer but higher-value orders—suggesting potential for premium offerings - ***Explore targeted campaigns on Mondays for high-value customers***
 
 ## Data Pre-Processing
 
