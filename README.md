@@ -75,8 +75,6 @@ Accurate forecasting of sales has 3 major benefits:
   
 <img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
 
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
-
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
 
 
