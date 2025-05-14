@@ -35,7 +35,16 @@ Sales: Total sales amount for the store on the given day.
 
 <img src="Pictures/region_type.png" alt="Data" width="800"/> 
 
-<img src="Pictures/holiday_discount.png" alt="Data" width="800"/>
+<img src="Pictures/holiday_discount.png" alt="Data" width="800"/> 
+
+1. ***Day Distribution:*** Majority of days (48.3%) had no holiday, no discount. Only 6.2% of days had both holiday and discount
+2. ***Order Volume:*** Highest orders on non-holiday discount days (30.5%). Holiday no-discount days had the lowest order share (20.5%)
+3. ***Sales Volume:*** Highest sales on non-holiday discount days (31.8%). Followed by holiday + discount days (24.7%)
+
+***Insight:***
+
+1. Discounts strongly boost both orders and sales, regardless of holidays
+2. Holidays alone do not guarantee higher sales or orders—discounts are key
 
 <img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
 
