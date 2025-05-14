@@ -70,7 +70,9 @@ Sales: Total sales amount for the store on the given day.
 
 ## Model Building
 
+### Total Forecast:
 
+1. SARIMAX: ***Train MAPE - 9.85% | Val MAPE - 9.96%***
 
 ### Rolling Forecast:
 
