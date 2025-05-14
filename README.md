@@ -39,6 +39,23 @@ Sales: Total sales amount for the store on the given day.
 
 <img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
 
+***Key Findings:***
+
+1. Sunday had the highest average sales (~₹49,044) and strong average order value (₹639)
+2. Saturday followed with ~₹46,730 in sales, but had the lowest avg order value (₹623), indicating high order volume
+3. Monday had the highest average order value (₹649), despite lower total sales than the weekend
+4. Weekdays (Tue–Fri) showed relatively stable sales (₹39k–₹41k) and avg order values (₹631–₹636)
+
+***Insights:***
+
+1. Weekends drive higher revenue, likely due to more consumer activity
+2. Monday shows fewer but higher-value orders—suggesting potential for premium offerings
+
+***Recommendation:***
+
+1. Leverage weekends for promotions to maximize volume
+2. Explore targeted campaigns on Mondays for high-value customers
+
 
 ## Data Pre-Processing
 
