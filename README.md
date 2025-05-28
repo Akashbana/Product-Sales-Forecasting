@@ -41,7 +41,7 @@ Sales: Total sales amount for the store on the given day.
 2. ***Order Volume:*** Highest orders on non-holiday discount days (30.5%). Holiday no-discount days had the lowest order share (20.5%)
 3. ***Sales Volume:*** Highest sales on non-holiday discount days (31.8%). Followed by holiday + discount days (24.7%)
 
-***Insight:***
+***Insights:***
 
 1. Discounts strongly boost both orders and sales, regardless of holidays
 2. Holidays alone do not guarantee higher sales or orders—discounts are key
