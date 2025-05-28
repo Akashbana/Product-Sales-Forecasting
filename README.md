@@ -80,8 +80,6 @@ Sales: Total sales amount for the store on the given day.
 
 ## Outcome
 
-
-
 Accurate forecasting of sales has 3 major benefits:
 
 * Accurate production levels
@@ -103,6 +101,9 @@ Accurate forecasting of sales has 3 major benefits:
 <img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
 
 <img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
+
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
 
 
 <img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
