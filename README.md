@@ -67,6 +67,7 @@ Sales: Total sales amount for the store on the given day.
 ### Total Forecast:
 
 1. SARIMAX: ***Train MAPE - 9.85% | Val MAPE - 9.96%***
+2. Prophet:
 
 ### Rolling Forecast:
 
