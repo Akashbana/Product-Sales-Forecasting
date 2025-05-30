@@ -148,20 +148,17 @@ A ***p-value < 0.05*** → reject H₀ → stationary series
 
 <img src="Pictures/adfuller.png" alt="Data" width="500"/>
 
+### Sales Forecasting:
 
-### Total Forecast:
+Sales is a function of following factors - ***F(Store id x Time x Day of the week x Holiday x Discount)***
+
+***Total Forecast:***
 
 1. SARIMAX: ***Train MAPE - 9.85% | Val MAPE - 9.96%***
-2. Prophet:
 
-### Rolling Forecast:
+***Rolling Forecast:***
 
 1. SARIMAX: ***Train MAPE - 7.24% | Val MAPE - 7.81%***      
-2. Prophet:
-3. ML Models    
-   XGBoost - ***Val MAPE -  | Train MAPE - ***
-5. DL Models
-   NN - ***Val MAPE -  | Train MAPE - ***
 
 ## Outcome
 
