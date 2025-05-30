@@ -95,9 +95,13 @@ Sales: Total sales amount for the store on the given day.
 
 ## Data Pre-Processing
 
+***Missing Values:***
+
 <img src="Pictures/missing values.png" alt="Data" width="400"/>
 
 * No missing values
+
+***Outliers:***
 
 <img src="Pictures/outliers.png" alt="Data" width="800"/>
 
@@ -130,7 +134,22 @@ Any time series may consist of the following components: ***Base Level + Trend +
 
 ***Stationarity***
 
+**ADF Test (Augmented Dickey-Fuller):**
+
+The ADF test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
+
+***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary
+
+A ***p-value < 0.05*** → reject H₀ → stationary series
+
+***Insight:*** Helps determine if differencing is needed to make the series suitable for modeling
+
+<img src="Pictures/adfullerformula.png" alt="Data" width="500"/>
+
+***ADF Test*** ---> ***Data is stationary***
+
 <img src="Pictures/adfuller.png" alt="Data" width="500"/>
+
 
 ### Total Forecast:
 
