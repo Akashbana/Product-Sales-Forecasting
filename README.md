@@ -112,10 +112,25 @@ Sales: Total sales amount for the store on the given day.
 
 Any time series may consist of the following components: ***Base Level + Trend + Seasonality + Error***
 
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+<img src="Pictures/acf and pacf.png" alt="Data" width="800"/>
 
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+***ACF Plot:*** Autocorrelation measures the correlation between a time series and its lagged values
 
+* The plot shows a significant spike at ***lag 1***, which usually indicates strong autocorrelation and possible short-term persistence in the data
+* Gradual decay in the ACF often suggests a non-stationary series, possibly with a trend or seasonality
+
+***PACF Plot:*** Partial Autocorrelation measures the direct effect of a lag on the series by removing the influence of intermediate lags
+
+* The strong spike at lag 1 is also visible in the PACF plot, which is typical for autoregressive (AR) processes
+* A sudden drop-off after lag 1, followed by values within the confidence interval, indicates a potential ***AR(1)*** process
+
+***FFT:***
+
+* There are no other significant peaks at ***non-zero frequencies***, suggesting the absence of clear seasonal or cyclical patterns. This means this time series data likely lacks strong periodicity
+
+***Stationarity***
+
+<img src="Pictures/adfuller.png" alt="Data" width="500"/>
 
 ### Total Forecast:
 
