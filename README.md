@@ -142,11 +142,9 @@ The ADF test checks if a time series is stationary, meaning its statistical prop
 
 A ***p-value < 0.05*** → reject H₀ → stationary series
 
-***Insight:*** Helps determine if differencing is needed to make the series suitable for modeling
-
 <img src="Pictures/adfullerformula.png" alt="Data" width="500"/>
 
-***ADF Test*** ---> ***Data is stationary***
+***ADF Test*** ---> ***Data is stationary*** ---> ***No differencing required***
 
 <img src="Pictures/adfuller.png" alt="Data" width="500"/>
 
