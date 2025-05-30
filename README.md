@@ -95,6 +95,19 @@ Sales: Total sales amount for the store on the given day.
 
 ## Data Pre-Processing
 
+<img src="Pictures/missing values.png" alt="Data" width="400"/>
+
+* No missing values
+
+<img src="Pictures/outliers.png" alt="Data" width="800"/>
+
+* ***Red dots*** represent outliers in the line plots, which are identified using ***IQR***
+* Outliers could be because of various reasons like wrong entry, higher sales due to festivals, etc
+
+***Assumptions:***
+
+1. Spikes & drops in sales are supported by no. of orders placed, so I am assuming that due to some external event, these spikes & drops in sales are noticed
+
 ## Model Building
 
 ### Total Forecast:
