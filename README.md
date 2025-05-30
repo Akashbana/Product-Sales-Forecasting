@@ -29,11 +29,44 @@ Sales: Total sales amount for the store on the given day.
 
 ## EDA
 
-<img src="Pictures/location_type.png" alt="Data" width="800"/> 
+<img src="Pictures/location_type.png" alt="Data" width="800"/>
+
+***Key Findings:***
+
+1. ***S4*** leads with the highest average sales (~59.9k) and orders/day (102), showing strong revenue and customer activity despite high variability
+2. ***S3*** performs well with solid sales and order volume
+3. ***S1*** has moderate sales but lower order efficiency
+4. ***S2*** underperforms with the lowest sales and orders/day, though it's the most consistent
+
+***Insights:***
+
+1. ***S4*** is the most profitable but volatile. ***S2*** shows stability but lacks performance
 
 <img src="Pictures/store_type.png" alt="Data" width="800"/> 
 
+***Key Findings:***
+
+1. ***S4*** leads with the highest average sales (~59.9k) and orders/day (102), showing strong revenue and customer activity despite high variability
+2. ***S3*** performs well with solid sales and order volume
+3. ***S1*** has moderate sales but lower order efficiency
+4. ***S2*** underperforms with the lowest sales and orders/day, though it's the most consistent
+
+***Insights:***
+
+1. ***S4*** is the most profitable but volatile. ***S2*** shows stability but lacks performance
+
 <img src="Pictures/region_type.png" alt="Data" width="800"/> 
+
+***Key Findings:***
+
+1. ***R1*** has the highest avg sales (~46.8k) and high orders/day (69), but also the highest variability (46.2%)
+2. ***R2, R3, R4*** have similar avg sales (~40k–42k) with ***R4*** having the lowest order volume (57/day)
+3. ***R3*** shows relatively better order efficiency (37.6%)
+
+***Insights:***
+
+1. ***R1*** is the top-selling but most volatile region. ***R4*** lags in order volume. All regions show similar sales but vary in efficiency and consistency
+
 
 <img src="Pictures/holiday_discount.png" alt="Data" width="800"/> 
 
