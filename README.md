@@ -110,6 +110,13 @@ Sales: Total sales amount for the store on the given day.
 
 ## Model Building
 
+Any time series may consist of the following components: ***Base Level + Trend + Seasonality + Error***
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+
+
 ### Total Forecast:
 
 1. SARIMAX: ***Train MAPE - 9.85% | Val MAPE - 9.96%***
