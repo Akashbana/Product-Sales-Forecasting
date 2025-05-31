@@ -167,22 +167,9 @@ Sales is a function of following factors - ***F(Store id x Time x Day of the wee
 
 <img src="Pictures/arima.png" alt="Data" width="800"/>
 
-***Validation MAPE:*** ARIMA ---> ***27.3%***   | SARIMA ---> ***26.3%***
+***Validation MAPE:*** ARIMA ---> ***23.4%***   | SARIMA ---> ***28.03%***
 
 * Data is stationary with no strong seasonality with multivariate features like holidays, discounts, etc. Therefore, I will use SARIMAX directly as ARIMA models are struggling which do not capture the impact of exog variables
-
-***SARIMAX:***
-
-SARIMAX is an extension of the ARIMA model that:
-
-1. Handles seasonality
-2. Supports exogenous variables (external predictors)
-
-It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: differencing to remove trend + ***MA (Moving Average)***: past forecast errors + ***S (Seasonal)***: seasonal patterns + ***X (eXogenous)***: external regressors like holidays, promotions, weather, etc   
-
-                                                SARIMAX(p,d,q)(P,D,Q,s)   
-                                                
-Where: p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)
 
 ***Variance in Daily/Monthly/Quarterly Sales:***
 
@@ -231,6 +218,23 @@ To enhance model performance and interpretability, I engineered binary flags for
 * High sales months ---> Flagged months with significantly above-average sales ---> months = [1,5,6,7,12]
 * High sales days ---> Days of the month that historically showed peak sales ---> days = [3,4,5]
 * High sales quarter ---> Captured the strongest quarter of the year ---> quarter = [2]
+
+***SARIMAX:***
+
+SARIMAX is an extension of the ARIMA model that:
+
+1. Handles seasonality
+2. Supports exogenous variables (external predictors)
+
+It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: differencing to remove trend + ***MA (Moving Average)***: past forecast errors + ***S (Seasonal)***: seasonal patterns + ***X (eXogenous)***: external regressors like holidays, promotions, weather, etc   
+
+                                                SARIMAX(p,d,q)(P,D,Q,s)   
+                                                
+Where: p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)
+
+
+
+### Forecast Summary:
 
 ***Total Forecast:***
 
