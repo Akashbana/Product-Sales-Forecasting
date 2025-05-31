@@ -132,29 +132,26 @@ Any time series may consist of the following components: ***Base Level + Trend +
 
 * There are no other significant peaks at ***non-zero frequencies***, suggesting the absence of clear seasonal or cyclical patterns. This means this time series data likely lacks strong periodicity
 
-### Stationarity ---> ADF Test (Augmented Dickey-Fuller)
+### Stationarity
 
-The ADF test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
+The ADF (Augmented Dickey-Fuller) test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
 
-***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary ---> 
-
-A ***p-value < 0.05*** → reject H₀ → stationary series
+***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary
 
 <img src="Pictures/adfullerformula.png" alt="Data" width="500"/>
 
+    from statsmodels.tsa.stattools import adfuller 
 
-                                             from statsmodels.tsa.stattools import adfuller 
-                                             # Ho: data is not stationary
-                                             # Ha: data is stationary
+    # A p-value < 0.05 → reject H₀ → stationary series    
+    
+    result = adfuller(total_daily_sales) 
+    print(f'ADF statistic:{result[0]}')
+    print(f'p value:{result[1]}') 
                                              
-                                             result = adfuller(total_daily_sales) 
-                                             print(f'ADF statistic:{result[0]}')
-                                             print(f'p value:{result[1]}') 
-                                             
-                                             if result[1] < 0.05:
-                                                 print('Reject null hypothesis, Data is stationary')
-                                             else:
-                                                 print('Data is not stationary') 
+    if result[1] < 0.05:
+        print('Reject null hypothesis, Data is stationary')
+    else:
+        print('Data is not stationary') 
 
 
 ***ADF Test*** ---> ***p-value = 0.007*** ---> ***Data is stationary*** ---> ***No differencing required***
@@ -277,7 +274,7 @@ Q-Q Plot of Residuals:
 * There are certain holidays when ***sales have dropped drastically***. Further analysis on these dates would provide exact reason for such big drops, which could be factored into the model later
 * Since I do not have relevant details about these dates, I have capped these sales to ***2% percentile*** to remove extreme sharp drops
 
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+<img src="Pictures/sarimax2plot.png" alt="Data" width="800"/>
 
 * Validation MAPE for ['Store_id', 'high_sales_quarter', 'day_of_week', 'Holiday', 'Discount'] ---> reduced by 2% points after outliers are capped at 2% percetile from ***11.52% to 9.96%***
 
