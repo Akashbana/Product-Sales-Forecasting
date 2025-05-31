@@ -245,7 +245,11 @@ This approach captures hidden seasonality patterns and improves model performanc
     ['Store_id', 'high_sales_month', 'day_of_week', 'Holiday', 'Discount'],   
     ['Store_id', 'high_sales_day', 'day_of_week', 'Holiday', 'Discount']
 
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
 
+***Insights:*** Grouping by ***high_sales_quarter*** led to the best overall performance. This highlights the value of combining domain-specific patterns with SARIMAX for improved forecasting
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
 
 ### Forecast Summary:
 
