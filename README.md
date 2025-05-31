@@ -232,6 +232,19 @@ It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: diff
                                                 
 Where: p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)
 
+To enhance forecasting accuracy, I used SARIMAX with ***grouped exogenous*** features. Multiple feature sets were used to group training data and compute average sales. These were normalized and added as exogenous signals.
+
+Each SARIMAX model was evaluated using ***MAPE*** on validation data. The best-performing feature set was selected for final forecasting.
+
+This approach captures hidden seasonality patterns and improves model performance using domain-driven insights
+
+***Feature_sets:***
+
+    ['Store_id', 'day_of_week', 'Holiday', 'Discount'],   
+    ['Store_id', 'high_sales_quarter', 'day_of_week', 'Holiday', 'Discount'],   
+    ['Store_id', 'high_sales_month', 'day_of_week', 'Holiday', 'Discount'],   
+    ['Store_id', 'high_sales_day', 'day_of_week', 'Holiday', 'Discount']
+
 
 
 ### Forecast Summary:
