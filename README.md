@@ -132,21 +132,32 @@ Any time series may consist of the following components: ***Base Level + Trend +
 
 * There are no other significant peaks at ***non-zero frequencies***, suggesting the absence of clear seasonal or cyclical patterns. This means this time series data likely lacks strong periodicity
 
-***Stationarity***
-
-**ADF Test (Augmented Dickey-Fuller):**
+### Stationarity ---> ADF Test (Augmented Dickey-Fuller)
 
 The ADF test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
 
-***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary
+***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary ---> 
 
 A ***p-value < 0.05*** → reject H₀ → stationary series
 
 <img src="Pictures/adfullerformula.png" alt="Data" width="500"/>
 
-***ADF Test*** ---> ***Data is stationary*** ---> ***No differencing required***
 
-<img src="Pictures/adfuller.png" alt="Data" width="500"/>
+                                             from statsmodels.tsa.stattools import adfuller 
+                                             # Ho: data is not stationary
+                                             # Ha: data is stationary
+                                             
+                                             result = adfuller(total_daily_sales) 
+                                             print(f'ADF statistic:{result[0]}')
+                                             print(f'p value:{result[1]}') 
+                                             
+                                             if result[1] < 0.05:
+                                                 print('Reject null hypothesis, Data is stationary')
+                                             else:
+                                                 print('Data is not stationary') 
+
+
+***ADF Test*** ---> ***p-value = 0.007*** ---> ***Data is stationary*** ---> ***No differencing required***
 
 ### Sales Forecasting:
 
