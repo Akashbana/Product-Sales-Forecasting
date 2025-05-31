@@ -194,6 +194,33 @@ Where: p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonali
 1. ***Q2*** emerged as the strongest performer with a ***+4%*** variance, indicating favorable sales conditions during this period
 2. ***Q4*** showed the sharpest drop ***(-3.5%)***, which could hint at demand saturation or operational bottlenecks
 
+***Feature Engineering***
+
+                           # months with higher sales than global average
+                           months = [1,5,6,7,12]  
+                           df_train['high_sales_month'] = np.where(df_train['month'].isin(months), 1, 0)
+                           df_val['high_sales_month'] = np.where(df_val['month'].isin(months), 1, 0)
+                           df_test['high_sales_month'] = np.where(df_test['month'].isin(months), 1, 0) 
+                           
+                           # days with higher sales than global average
+                           days = [3,4,5]  
+                           df_train['high_sales_day'] = np.where(df_train['day'].isin(days), 1, 0)
+                           df_val['high_sales_day'] = np.where(df_val['day'].isin(days), 1, 0)
+                           df_test['high_sales_day'] = np.where(df_test['day'].isin(days), 1, 0) 
+                           
+                           # quarters with higher sales than global average
+                           quarter = [2]  
+                           df_train['high_sales_quarter'] = np.where(df_train['quarter'].isin(quarter), 1, 0)
+                           df_val['high_sales_quarter'] = np.where(df_val['quarter'].isin(quarter), 1, 0)
+                           df_test['high_sales_quarter'] = np.where(df_test['quarter'].isin(quarter), 1, 0)
+
+
+To enhance model performance and interpretability, I engineered binary flags for periods with above-average sales activity based on exploratory data analysis:
+
+* High sales months ---> Flagged months with significantly above-average sales ---> months = [1,5,6,7,12]
+* High sales days ---> Days of the month that historically showed peak sales ---> days = [3,4,5]
+* High sales quarter ---> Captured the strongest quarter of the year ---> quarter = [2]
+
 ***Total Forecast:***
 
 1. SARIMAX: ***Train MAPE - 9.85% | Val MAPE - 9.96%***
