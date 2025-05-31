@@ -152,6 +152,23 @@ A ***p-value < 0.05*** → reject H₀ → stationary series
 
 Sales is a function of following factors - ***F(Store id x Time x Day of the week x Holiday x Discount)***
 
+***Base Model Prediction***
+
+
+
+***SARIMAX:***
+
+SARIMAX is an extension of the ARIMA model that:
+
+1. Handles seasonality
+2. Supports exogenous variables (external predictors)
+
+It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: differencing to remove trend + ***MA (Moving Average)***: past forecast errors + ***S (Seasonal)***: seasonal patterns + ***X (eXogenous)***: external regressors like holidays, promotions, weather, etc   
+
+                                                SARIMAX(p,d,q)(P,D,Q,s)   
+                                                
+Where: ***p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)***
+
 ***Total Forecast:***
 
 1. SARIMAX: ***Train MAPE - 9.85% | Val MAPE - 9.96%***
