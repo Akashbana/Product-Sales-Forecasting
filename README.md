@@ -272,10 +272,14 @@ Q-Q Plot of Residuals:
 
 ***Capping Outliers***
 
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
+<img src="Pictures/capping outliers.png" alt="Data" width="800"/> 
 
-1. There are certain holidays when ***sales have dropped drastically***. Further analysis on these dates would provide exact reason for such big drops, which could be factored into the model later
-2. Since I do not have relevant details about these dates, I have capped these sales to ***2% percentile*** to remove extreme sharp drops
+* There are certain holidays when ***sales have dropped drastically***. Further analysis on these dates would provide exact reason for such big drops, which could be factored into the model later
+* Since I do not have relevant details about these dates, I have capped these sales to ***2% percentile*** to remove extreme sharp drops
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+
+* Validation MAPE for ['Store_id', 'high_sales_quarter', 'day_of_week', 'Holiday', 'Discount'] ---> reduced by 2% points after outliers are capped at 2% percetile from ***11.52% to 9.96%***
 
 ### Forecast Summary:
 
