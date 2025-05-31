@@ -194,23 +194,23 @@ Sales is a function of following factors - ***F(Store id x Time x Day of the wee
 
 ***Feature Engineering***
 
-                           # months with higher sales than global average
-                           months = [1,5,6,7,12]  
-                           df_train['high_sales_month'] = np.where(df_train['month'].isin(months), 1, 0)
-                           df_val['high_sales_month'] = np.where(df_val['month'].isin(months), 1, 0)
-                           df_test['high_sales_month'] = np.where(df_test['month'].isin(months), 1, 0) 
+    # months with higher sales than global average
+    months = [1,5,6,7,12]  
+    df_train['high_sales_month'] = np.where(df_train['month'].isin(months), 1, 0)
+    df_val['high_sales_month'] = np.where(df_val['month'].isin(months), 1, 0)
+    df_test['high_sales_month'] = np.where(df_test['month'].isin(months), 1, 0) 
                            
-                           # days with higher sales than global average
-                           days = [3,4,5]  
-                           df_train['high_sales_day'] = np.where(df_train['day'].isin(days), 1, 0)
-                           df_val['high_sales_day'] = np.where(df_val['day'].isin(days), 1, 0)
-                           df_test['high_sales_day'] = np.where(df_test['day'].isin(days), 1, 0) 
+    # days with higher sales than global average
+    days = [3,4,5]  
+    df_train['high_sales_day'] = np.where(df_train['day'].isin(days), 1, 0)
+    df_val['high_sales_day'] = np.where(df_val['day'].isin(days), 1, 0)
+    df_test['high_sales_day'] = np.where(df_test['day'].isin(days), 1, 0) 
                            
-                           # quarters with higher sales than global average
-                           quarter = [2]  
-                           df_train['high_sales_quarter'] = np.where(df_train['quarter'].isin(quarter), 1, 0)
-                           df_val['high_sales_quarter'] = np.where(df_val['quarter'].isin(quarter), 1, 0)
-                           df_test['high_sales_quarter'] = np.where(df_test['quarter'].isin(quarter), 1, 0)
+    # quarters with higher sales than global average
+    quarter = [2]  
+    df_train['high_sales_quarter'] = np.where(df_train['quarter'].isin(quarter), 1, 0)
+    df_val['high_sales_quarter'] = np.where(df_val['quarter'].isin(quarter), 1, 0)
+    df_test['high_sales_quarter'] = np.where(df_test['quarter'].isin(quarter), 1, 0)
 
 
 To enhance model performance and interpretability, I engineered binary flags for periods with above-average sales activity based on exploratory data analysis:
@@ -245,11 +245,37 @@ This approach captures hidden seasonality patterns and improves model performanc
     ['Store_id', 'high_sales_month', 'day_of_week', 'Holiday', 'Discount'],   
     ['Store_id', 'high_sales_day', 'day_of_week', 'Holiday', 'Discount']
 
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+<img src="Pictures/sarimax1.png" alt="Data" width="800"/>
 
 ***Insights:*** Grouping by ***high_sales_quarter*** led to the best overall performance. This highlights the value of combining domain-specific patterns with SARIMAX for improved forecasting
 
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+<img src="Pictures/sarimax1plot.png" alt="Data" width="800"/>
+
+***Residual Analysis***
+
+After forecasting with the best SARIMAX model, I performed residual analysis:
+
+* Scatter Plot: Plotted residuals vs. forecasted values for train and validation sets to check for bias or heteroscedasticity (none observed)
+* Q-Q Plot: To check if Residuals approximately followed a normal distribution, validating model assumptions
+
+<img src="Pictures/residual analysis.png" alt="Data" width="800"/>
+
+Residuals vs Forecasted Values:
+
+1. Residuals are ***randomly scattered***, which is good
+2. However, variance increases at higher forecast values, suggesting ***heteroscedasticity*** (inconsistent error variance)
+
+Q-Q Plot of Residuals:
+
+1. Residuals are approximately ***normal***, but heavy tails indicate some ***extreme errors (outliers)***
+2. The lower tail (left side) deviates more, meaning the model ***underestimates*** sales in some cases
+
+***Capping Outliers***
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/> 
+
+1. There are certain holidays when ***sales have dropped drastically***. Further analysis on these dates would provide exact reason for such big drops, which could be factored into the model later
+2. Since I do not have relevant details about these dates, I have capped these sales to ***2% percentile*** to remove extreme sharp drops
 
 ### Forecast Summary:
 
