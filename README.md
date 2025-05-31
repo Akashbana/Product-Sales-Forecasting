@@ -175,7 +175,24 @@ Where: ***p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of season
 
 ***Variance in Daily/Monthly/Quarterly Sales:***
 
+<img src="Pictures/variance in sales.png" alt="Data" width="800"/>
 
+***Right plot*** ---> It indicates variance in % of sales from overall average sales
+
+***Day Sales:***
+
+1. Days ***3, 4 & 5*** show positive deviations up to ***+12%***, indicating key high-performing days
+2. Days beyond ***20*** i.e during month end, sales drop up to ***-6%***, suggesting underperformance
+
+***Monthly Sales:***
+
+1. ***May*** and ***December*** showed a ***+12% and +9%*** rise respectively, indicating seasonal demand spikes
+2. ***October*** and ***November*** dropped by ***-9% to -11%***, signaling potential seasonal dips
+
+***Quarter Sales:***
+
+1. ***Q2*** emerged as the strongest performer with a ***+4%*** variance, indicating favorable sales conditions during this period
+2. ***Q4*** showed the sharpest drop ***(-3.5%)***, which could hint at demand saturation or operational bottlenecks
 
 ***Total Forecast:***
 
