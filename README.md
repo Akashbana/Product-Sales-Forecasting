@@ -132,21 +132,32 @@ Any time series may consist of the following components: ***Base Level + Trend +
 
 * There are no other significant peaks at ***non-zero frequencies***, suggesting the absence of clear seasonal or cyclical patterns. This means this time series data likely lacks strong periodicity
 
-***Stationarity***
-
-**ADF Test (Augmented Dickey-Fuller):**
+### Stationarity ---> ADF Test (Augmented Dickey-Fuller)
 
 The ADF test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
 
-***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary
+***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary ---> 
 
 A ***p-value < 0.05*** → reject H₀ → stationary series
 
 <img src="Pictures/adfullerformula.png" alt="Data" width="500"/>
 
-***ADF Test*** ---> ***Data is stationary*** ---> ***No differencing required***
 
-<img src="Pictures/adfuller.png" alt="Data" width="500"/>
+                                             from statsmodels.tsa.stattools import adfuller 
+                                             # Ho: data is not stationary
+                                             # Ha: data is stationary
+                                             
+                                             result = adfuller(total_daily_sales) 
+                                             print(f'ADF statistic:{result[0]}')
+                                             print(f'p value:{result[1]}') 
+                                             
+                                             if result[1] < 0.05:
+                                                 print('Reject null hypothesis, Data is stationary')
+                                             else:
+                                                 print('Data is not stationary') 
+
+
+***ADF Test*** ---> ***p-value = 0.007*** ---> ***Data is stationary*** ---> ***No differencing required***
 
 ### Sales Forecasting:
 
@@ -156,9 +167,57 @@ Sales is a function of following factors - ***F(Store id x Time x Day of the wee
 
 <img src="Pictures/arima.png" alt="Data" width="800"/>
 
-***Validation MAPE:*** ARIMA ---> ***27.3%***   | SARIMA ---> ***26.3%***
+***Validation MAPE:*** ARIMA ---> ***23.4%***   | SARIMA ---> ***28.03%***
 
-* Data is ***stationary with no strong seasonality*** with multivariate features like ***holidays, discounts***, etc. Therefore, I will use ***SARIMAX*** directly as ***ARIMA*** models are struggling which do not capture the impact of exog variables
+* Data is stationary with no strong seasonality with multivariate features like holidays, discounts, etc. Therefore, I will use SARIMAX directly as ARIMA models are struggling which do not capture the impact of exog variables
+
+***Variance in Daily/Monthly/Quarterly Sales:***
+
+<img src="Pictures/variance in sales.png" alt="Data" width="800"/>
+
+***Right plot*** ---> It indicates variance in % of sales from overall average sales
+
+***Day Sales:***
+
+1. Days ***3, 4 & 5*** show positive deviations up to ***+12%***, indicating key high-performing days
+2. Days beyond ***20*** i.e during month end, sales drop up to ***-6%***, suggesting underperformance
+
+***Monthly Sales:***
+
+1. ***May*** and ***December*** showed a ***+12% and +9%*** rise respectively, indicating seasonal demand spikes
+2. ***October*** and ***November*** dropped by ***-9% to -11%***, signaling potential seasonal dips
+
+***Quarter Sales:***
+
+1. ***Q2*** emerged as the strongest performer with a ***+4%*** variance, indicating favorable sales conditions during this period
+2. ***Q4*** showed the sharpest drop ***(-3.5%)***, which could hint at demand saturation or operational bottlenecks
+
+***Feature Engineering***
+
+                           # months with higher sales than global average
+                           months = [1,5,6,7,12]  
+                           df_train['high_sales_month'] = np.where(df_train['month'].isin(months), 1, 0)
+                           df_val['high_sales_month'] = np.where(df_val['month'].isin(months), 1, 0)
+                           df_test['high_sales_month'] = np.where(df_test['month'].isin(months), 1, 0) 
+                           
+                           # days with higher sales than global average
+                           days = [3,4,5]  
+                           df_train['high_sales_day'] = np.where(df_train['day'].isin(days), 1, 0)
+                           df_val['high_sales_day'] = np.where(df_val['day'].isin(days), 1, 0)
+                           df_test['high_sales_day'] = np.where(df_test['day'].isin(days), 1, 0) 
+                           
+                           # quarters with higher sales than global average
+                           quarter = [2]  
+                           df_train['high_sales_quarter'] = np.where(df_train['quarter'].isin(quarter), 1, 0)
+                           df_val['high_sales_quarter'] = np.where(df_val['quarter'].isin(quarter), 1, 0)
+                           df_test['high_sales_quarter'] = np.where(df_test['quarter'].isin(quarter), 1, 0)
+
+
+To enhance model performance and interpretability, I engineered binary flags for periods with above-average sales activity based on exploratory data analysis:
+
+* High sales months ---> Flagged months with significantly above-average sales ---> months = [1,5,6,7,12]
+* High sales days ---> Days of the month that historically showed peak sales ---> days = [3,4,5]
+* High sales quarter ---> Captured the strongest quarter of the year ---> quarter = [2]
 
 ***SARIMAX:***
 
@@ -171,11 +230,28 @@ It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: diff
 
                                                 SARIMAX(p,d,q)(P,D,Q,s)   
                                                 
-Where: ***p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)***
+Where: p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)
 
-***Variance in Daily/Monthly/Quarterly Sales:***
+To enhance forecasting accuracy, I used SARIMAX with ***grouped exogenous*** features. Multiple feature sets were used to group training data and compute average sales. These were normalized and added as exogenous signals.
 
+Each SARIMAX model was evaluated using ***MAPE*** on validation data. The best-performing feature set was selected for final forecasting.
 
+This approach captures hidden seasonality patterns and improves model performance using domain-driven insights
+
+***Feature_sets:***
+
+    ['Store_id', 'day_of_week', 'Holiday', 'Discount'],   
+    ['Store_id', 'high_sales_quarter', 'day_of_week', 'Holiday', 'Discount'],   
+    ['Store_id', 'high_sales_month', 'day_of_week', 'Holiday', 'Discount'],   
+    ['Store_id', 'high_sales_day', 'day_of_week', 'Holiday', 'Discount']
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+
+***Insights:*** Grouping by ***high_sales_quarter*** led to the best overall performance. This highlights the value of combining domain-specific patterns with SARIMAX for improved forecasting
+
+<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
+
+### Forecast Summary:
 
 ***Total Forecast:***
 
