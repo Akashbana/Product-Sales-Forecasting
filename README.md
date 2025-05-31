@@ -95,9 +95,13 @@ Sales: Total sales amount for the store on the given day.
 
 ## Data Pre-Processing
 
+***Missing Values:***
+
 <img src="Pictures/missing values.png" alt="Data" width="400"/>
 
 * No missing values
+
+***Outliers:***
 
 <img src="Pictures/outliers.png" alt="Data" width="800"/>
 
@@ -130,21 +134,48 @@ Any time series may consist of the following components: ***Base Level + Trend +
 
 ***Stationarity***
 
+**ADF Test (Augmented Dickey-Fuller):**
+
+The ADF test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
+
+***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary
+
+A ***p-value < 0.05*** → reject H₀ → stationary series
+
+<img src="Pictures/adfullerformula.png" alt="Data" width="500"/>
+
+***ADF Test*** ---> ***Data is stationary*** ---> ***No differencing required***
+
 <img src="Pictures/adfuller.png" alt="Data" width="500"/>
 
-### Total Forecast:
+### Sales Forecasting:
+
+Sales is a function of following factors - ***F(Store id x Time x Day of the week x Holiday x Discount)***
+
+***Base Model Prediction***
+
+
+
+***SARIMAX:***
+
+SARIMAX is an extension of the ARIMA model that:
+
+1. Handles seasonality
+2. Supports exogenous variables (external predictors)
+
+It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: differencing to remove trend + ***MA (Moving Average)***: past forecast errors + ***S (Seasonal)***: seasonal patterns + ***X (eXogenous)***: external regressors like holidays, promotions, weather, etc   
+
+                                                SARIMAX(p,d,q)(P,D,Q,s)   
+                                                
+Where: ***p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)***
+
+***Total Forecast:***
 
 1. SARIMAX: ***Train MAPE - 9.85% | Val MAPE - 9.96%***
-2. Prophet:
 
-### Rolling Forecast:
+***Rolling Forecast:***
 
 1. SARIMAX: ***Train MAPE - 7.24% | Val MAPE - 7.81%***      
-2. Prophet:
-3. ML Models    
-   XGBoost - ***Val MAPE -  | Train MAPE - ***
-5. DL Models
-   NN - ***Val MAPE -  | Train MAPE - ***
 
 ## Outcome
 
