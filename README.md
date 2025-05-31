@@ -278,6 +278,10 @@ Q-Q Plot of Residuals:
 
 * Validation MAPE for ['Store_id', 'high_sales_quarter', 'day_of_week', 'Holiday', 'Discount'] ---> reduced by 2% points after outliers are capped at 2% percetile from ***11.52% to 9.96%***
 
+### Rolling Monthly Forecasting
+
+
+
 ### Forecast Summary:
 
 ***Total Forecast:***
