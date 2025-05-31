@@ -154,7 +154,11 @@ Sales is a function of following factors - ***F(Store id x Time x Day of the wee
 
 ***Base Model Prediction***
 
+<img src="Pictures/arima.png" alt="Data" width="800"/>
 
+***Validation MAPE:*** ARIMA ---> ***27.3%***   | SARIMA ---> ***26.3%***
+
+* Data is ***stationary with no strong seasonality*** with multivariate features like ***holidays, discounts***, etc. Therefore, I will use ***SARIMAX*** directly as ***ARIMA*** models are struggling which do not capture the impact of exog variables
 
 ***SARIMAX:***
 
@@ -168,6 +172,10 @@ It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: diff
                                                 SARIMAX(p,d,q)(P,D,Q,s)   
                                                 
 Where: ***p,d,q: ARIMA terms | P,D,Q: seasonal ARIMA terms | s: length of seasonality (e.g., 12 for monthly data with yearly seasonality)***
+
+***Variance in Daily/Monthly/Quarterly Sales:***
+
+
 
 ***Total Forecast:***
 
