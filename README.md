@@ -5,10 +5,10 @@ In the competitive retail industry, the ability to predict future sales accurate
 **Supply Chain Optimization**
 
 1. Total Sales Forecasting:
-  * Facilitates comprehensive ***production planning*** aligned with demand, enables bulk raw material procurement, ***reducing procurement costs*** & supports efficient allocation of manpower and utilities
-  * Optimizes ***sales promotions*** by identifying sales spikes and drops
-  * Assists in region-specific demand planning, enhances ***logistics and distribution management***
-  * Improves ***inventory management*** by anticipating store-level demand and ensures optimal staffing and resource allocation
+   * Facilitates comprehensive ***production planning*** aligned with demand, enables bulk raw material procurement, ***reducing procurement costs*** & supports efficient allocation of manpower and utilities
+   * Optimizes ***sales promotions*** by identifying sales spikes and drops
+   * Assists in region-specific demand planning, enhances ***logistics and distribution management***
+   * Improves ***inventory management*** by anticipating store-level demand and ensures optimal staffing and resource allocation
 2. Impact of Holiday on sales
 3. Impact of discount on sales
 
@@ -323,7 +323,7 @@ Total average validation MAPE ---> ***7.79%***
 
 ***Rolling Forecast:***
 
-1. SARIMAX: ***Train MAPE - 7.24% | Val MAPE - 7.81%***      
+1. SARIMAX: ***Train MAPE - 7.24% | Val MAPE - 7.79%***      
 
 ## Outcome
 
@@ -344,6 +344,3 @@ Accurate forecasting of sales has 3 major benefits:
    * For production - Forecasts from Total sales per day
    * For logistics planning - Forecasts from individuals regions
    * This way we ensure there is no overproduction & any minor demand variations in individual regions are also met easily
-  
-<img src="Pictures/day_of_the_week.png" alt="Data" width="800"/>
-
