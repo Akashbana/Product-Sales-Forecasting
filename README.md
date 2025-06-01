@@ -280,7 +280,11 @@ Q-Q Plot of Residuals:
 
 ### Rolling Monthly Forecasting
 
+To simulate real-world deployment, I implemented a monthly rolling forecast:
 
+* Trained the SARIMAX model on historical data up to each month
+* Forecasted the next month using updated exogenous variables
+* Repeated the process in a loop for the entire validation period
 
 ### Forecast Summary:
 
