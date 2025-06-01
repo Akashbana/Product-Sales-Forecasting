@@ -333,14 +333,18 @@ Accurate forecasting of sales has 3 major benefits:
 * Reduced logistic costs
 * Optimized Inventory space
 
+Best Forecast ---> ***SARIMAX*** ---> Rolling Forecast Storewise ---> ***Val MAPE - 7.79%***
+
+Validation MAPE: Jan 2019 - ***9.62%*** | Feb 2019 - ***5.86%*** | Mar 2019 - ***6.74%*** | Apr 2019 - ***9.51%*** | May 2019 - ***7.24%***
+
 ***Recommendations:***
 
-1. Required production level = Upper limit of 95% CI -
-   * Meets sales demand, avoids under stocking, leads to higher revenue
-   * Adjust the remaining inventory in tomorrow's forecast & plan production accordingly
-   * Extra inventory space required <= 4% of total sales per day
-   * Optimised operational costs by proper man power allocation & utility planning
-2. Since aggregated forecast values from individual regions <= Upper limit of 95% CI & forecast error MAPE < 1%, use:
-   * For production - Forecasts from Total sales per day
-   * For logistics planning - Forecasts from individuals regions
-   * This way we ensure there is no overproduction & any minor demand variations in individual regions are also met easily
+1. Production Planning Buffer
+
+    * Since the worst-case MAPE observed is ***9.62%***, production teams should plan for up to ±10% variation in forecasted sales
+    * This buffer helps absorb forecast uncertainty while avoiding overproduction or underproduction
+
+2. Inventory Space Allocation
+
+    * Warehousing capacity should be flexible enough to accommodate up to ***10%*** more stock than predicted
+    * Similarly, lean inventory strategies should be adjusted to avoid stockouts if actual demand exceeds forecasts by ***~10%***
