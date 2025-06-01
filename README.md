@@ -308,6 +308,9 @@ Most of the features are statistically significant except a few: ***'mean', 'exg
 
 ***Store-wise Forecasting:***
 
+* In retail forecasting, customer demand can vary significantly from one store to another due to local events, demographics, and regional seasonality
+* To capture these dynamics, I implemented store-wise forecasting, where each store’s sales are modeled individually or with tailored features
+
 
 
 ### Forecast Summary:
