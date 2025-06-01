@@ -311,9 +311,9 @@ Most of the features are statistically significant except a few: ***'mean', 'exg
 * In retail forecasting, customer demand can vary significantly from one store to another due to local events, demographics, and regional seasonality
 * To capture these dynamics, I implemented store-wise forecasting, where each store’s sales are modeled individually or with tailored features
 
-Validation MAPE: Jan 2019 - ***10.07%*** | Feb 2019 - ***5.94%*** | Mar 2019 - ***7.55%*** | Apr 2019 - ***9.2%*** | May 2019 - ***7.74%***
+Validation MAPE: Jan 2019 - ***9.62%*** | Feb 2019 - ***5.86%*** | Mar 2019 - ***6.74%*** | Apr 2019 - ***9.51%*** | May 2019 - ***7.24%***
 
-Total average validation MAPE ---> ***8.1%***
+Total average validation MAPE ---> ***7.79%***
 
 ### Forecast Summary:
 
