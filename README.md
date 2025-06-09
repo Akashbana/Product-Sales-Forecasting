@@ -350,3 +350,5 @@ Validation MAPE: Jan 2019 - ***9.62%*** | Feb 2019 - ***5.86%*** | Mar 2019 - **
     * Similarly, lean inventory strategies should be adjusted to avoid stockouts if actual demand exceeds forecasts by ***~10%***
 
 <img src="Pictures/capping outliers.png" alt="Data" width="800"/> 
+
+<img src="Pictures/capping outliers.png" alt="Data" width="800"/> 
