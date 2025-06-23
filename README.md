@@ -16,8 +16,8 @@ In the competitive retail industry, the ability to predict future sales accurate
 
 <img src="Pictures/data.png" alt="Data" width="800"/> 
 
-ID: Unique identifier for each record in the dataset.    
-Store_id: Unique identifier for each store.    
+ID: Unique identifier for each record in the dataset       
+Store_id: Unique identifier for each store       
 Store_Type: Categorization of the store based on its type.    
 Location_Type: Classification of the store's location (e.g., urban, suburban).    
 Region_Code: Code representing the geographical region where the store is located.     
