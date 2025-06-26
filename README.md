@@ -129,8 +129,6 @@ The ADF (Augmented Dickey-Fuller) test checks if a time series is stationary, me
 
 ***Null Hypothesis (H₀):*** Series has a unit root (non-stationary)   |   ***Alternative Hypothesis (H₁):*** Series is stationary
 
-<img src="Pictures/adfullerformula.png" alt="Data" width="500"/>
-
     from statsmodels.tsa.stattools import adfuller 
 
     # A p-value < 0.05 → reject H₀ → stationary series    
