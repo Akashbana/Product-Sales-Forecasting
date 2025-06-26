@@ -118,11 +118,6 @@ Any time series may consist of the following components: ***Base Level + Trend +
 
 <img src="Pictures/acf and pacf.png" alt="Data" width="800"/>
 
-***ACF Plot:*** Autocorrelation measures the correlation between a time series and its lagged values
-
-* The plot shows a significant spike at ***lag 1***, which usually indicates strong autocorrelation and possible short-term persistence in the data
-* Gradual decay in the ACF often suggests a non-stationary series, possibly with a trend or seasonality
-
 ### Stationarity
 
 The ADF (Augmented Dickey-Fuller) test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
