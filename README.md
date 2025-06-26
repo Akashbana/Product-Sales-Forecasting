@@ -221,9 +221,7 @@ To enhance model performance and interpretability, I engineered binary flags for
 SARIMAX is an extension of the ARIMA model that:
 
 1. Handles seasonality
-2. Supports exogenous variables (external predictors)
-
-It combines: ***AR (AutoRegressive)***: past values + ***I (Integrated)***: differencing to remove trend + ***MA (Moving Average)***: past forecast errors + ***S (Seasonal)***: seasonal patterns + ***X (eXogenous)***: external regressors like holidays, promotions, weather, etc   
+2. Supports exogenous variables (external predictors) 
 
                                                 SARIMAX(p,d,q)(P,D,Q,s)   
                                                 
