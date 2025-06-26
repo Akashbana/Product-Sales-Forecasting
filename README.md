@@ -128,10 +128,6 @@ Any time series may consist of the following components: ***Base Level + Trend +
 * The strong spike at lag 1 is also visible in the PACF plot, which is typical for autoregressive (AR) processes
 * A sudden drop-off after lag 1, followed by values within the confidence interval, indicates a potential ***AR(1)*** process
 
-***FFT:***
-
-* There are no other significant peaks at ***non-zero frequencies***, suggesting the absence of clear seasonal or cyclical patterns. This means this time series data likely lacks strong periodicity
-
 ### Stationarity
 
 The ADF (Augmented Dickey-Fuller) test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
