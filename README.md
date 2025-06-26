@@ -116,8 +116,6 @@ Sales: Total sales amount for the store on the given day
 
 Any time series may consist of the following components: ***Base Level + Trend + Seasonality + Error***
 
-<img src="Pictures/acf and pacf.png" alt="Data" width="800"/>
-
 ### Stationarity
 
 The ADF (Augmented Dickey-Fuller) test checks if a time series is stationary, meaning its statistical properties (mean, variance) do not change over time—critical for models like ARIMA.
