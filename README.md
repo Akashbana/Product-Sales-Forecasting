@@ -231,10 +231,6 @@ SARIMAX modelled in following way:
 
 1. Rolling window ---> Training data expands by one month & prediction is done for each month
 2. Feature set used for grouping ---> ['Store_id', 'high_sales_month', 'day_of_week', 'Holiday', 'Discount']
-3. Exog modeling:
-   - Group by features: Computed median sales_per_day_capped, orders/day, and mean order value
-   * Normalize: Scale sales_per_day_capped → exg_normalized using MinMaxScaler
-4. Holiday effects ---> Created day type ( Holiday, Pre-Holiday, Post-Holiday, Regular )
 
 ***Store-wise Forecasting - Model Performance:***
 
