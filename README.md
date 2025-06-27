@@ -159,10 +159,6 @@ Sales is a function of following factors - ***F(Store id x Time x Day of the wee
 
 To enhance model performance and interpretability, I engineered binary flags for periods with above-average sales activity based on exploratory data analysis:
 
-* High sales months ---> Flagged months with significantly above-average sales ---> months = [1,5,6,7,12]
-* High sales days ---> Days of the month that historically showed peak sales ---> days = [3,4,5]
-* High sales quarter ---> Captured the strongest quarter of the year ---> quarter = [2]
-
 ***SARIMAX:***
 
 SARIMAX is an extension of the ARIMA model that:
