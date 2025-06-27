@@ -157,28 +157,6 @@ Sales is a function of following factors - ***F(Store id x Time x Day of the wee
 ***Right plot*** ---> It indicates variance in % of sales from overall average sales
 
 
-
-***Feature Engineering***
-
-    # months with higher sales than global average
-    months = [1,5,6,7,12]  
-    df_train['high_sales_month'] = np.where(df_train['month'].isin(months), 1, 0)
-    df_val['high_sales_month'] = np.where(df_val['month'].isin(months), 1, 0)
-    df_test['high_sales_month'] = np.where(df_test['month'].isin(months), 1, 0) 
-                           
-    # days with higher sales than global average
-    days = [3,4,5]  
-    df_train['high_sales_day'] = np.where(df_train['day'].isin(days), 1, 0)
-    df_val['high_sales_day'] = np.where(df_val['day'].isin(days), 1, 0)
-    df_test['high_sales_day'] = np.where(df_test['day'].isin(days), 1, 0) 
-                           
-    # quarters with higher sales than global average
-    quarter = [2]  
-    df_train['high_sales_quarter'] = np.where(df_train['quarter'].isin(quarter), 1, 0)
-    df_val['high_sales_quarter'] = np.where(df_val['quarter'].isin(quarter), 1, 0)
-    df_test['high_sales_quarter'] = np.where(df_test['quarter'].isin(quarter), 1, 0)
-
-
 To enhance model performance and interpretability, I engineered binary flags for periods with above-average sales activity based on exploratory data analysis:
 
 * High sales months ---> Flagged months with significantly above-average sales ---> months = [1,5,6,7,12]
