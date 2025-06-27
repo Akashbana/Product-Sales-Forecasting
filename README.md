@@ -239,14 +239,6 @@ SARIMAX modelled in following way:
 6. Rolling average ---> Created rolling average for multiple days
 7. Interaction features ---> Combined exog, lags, mean, median, discount %
 
-***Total Forecasting - Model Performance:***
-
-Validation MAPE: Jan 2019 - ***10.07%*** | Feb 2019 - ***5.94%*** | Mar 2019 - ***7.55%*** | Apr 2019 - ***9.2%*** | May 2019 - ***7.74%***
-
-Total average validation MAPE ---> ***8.1%***
-
-Most of the features are statistically significant except a few: ***'mean', 'exg_median_perc', 'lag2_mean', 'ma.L2' & 'ma.L3'***
-
 ***Store-wise Forecasting - Model Performance:***
 
 * In retail forecasting, customer demand can vary significantly from one store to another due to local events, demographics, and regional seasonality
