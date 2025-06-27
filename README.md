@@ -235,9 +235,6 @@ SARIMAX modelled in following way:
    - Group by features: Computed median sales_per_day_capped, orders/day, and mean order value
    * Normalize: Scale sales_per_day_capped → exg_normalized using MinMaxScaler
 4. Holiday effects ---> Created day type ( Holiday, Pre-Holiday, Post-Holiday, Regular )
-5. Lag features ---> Created lag_1, lag_2, lag_3
-6. Rolling average ---> Created rolling average for multiple days
-7. Interaction features ---> Combined exog, lags, mean, median, discount %
 
 ***Store-wise Forecasting - Model Performance:***
 
