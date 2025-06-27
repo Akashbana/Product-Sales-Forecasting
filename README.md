@@ -227,11 +227,6 @@ To simulate real-world deployment, I implemented a monthly rolling forecast:
 * Forecasted the next month using updated exogenous variables
 * Repeated the process in a loop for the entire validation period
 
-SARIMAX modelled in following way:
-
-1. Rolling window ---> Training data expands by one month & prediction is done for each month
-2. Feature set used for grouping ---> ['Store_id', 'high_sales_month', 'day_of_week', 'Holiday', 'Discount']
-
 ***Store-wise Forecasting - Model Performance:***
 
 * In retail forecasting, customer demand can vary significantly from one store to another due to local events, demographics, and regional seasonality
