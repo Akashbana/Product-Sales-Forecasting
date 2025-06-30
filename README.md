@@ -213,7 +213,6 @@ Q-Q Plot of Residuals:
 <img src="Pictures/capping outliers.png" alt="Data" width="800"/> 
 
 * There are certain holidays when ***sales have dropped drastically***. Further analysis on these dates would provide exact reason for such big drops, which could be factored into the model later
-* Since I do not have relevant details about these dates, I have capped these sales to ***2% percentile*** to remove extreme sharp drops
 
 <img src="Pictures/sarimax2plot.png" alt="Data" width="800"/>
 
